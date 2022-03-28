@@ -1,47 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>iSchool</title>
-<h1>This is Heading 1</h1>
-<h2>This is Heading 2</h2>
-<h3>This is Heading 3</h3>
-<h4>This is Heading 4</h4>
-<h5>This is Heading 5</h5>
-<h6>This is Heading 6</h6>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-Box</title>
+    <style>
+.item{
+    background-color: tomato;
+    border: 2px solid green ;
+    margin: 10px ;
+    padding: 5px;
+    width: 220px ;
+    height: 170px ;
+    box-sizing: border-box;
+}
+.container{
+    width : 100%;
+    height: 544px;
+    border: 2px solid black;
+    /* Initializing The container as Flex container */
+    display: flex ;
+    /*  Flex Container Properties */
+
+    /* flex-direction is by default row it main defines the direction of boxes */
+    flex-direction: row;
+    /* flex-direction: column; */
+
+    /* Row and Column reverse mainly helps to reverse the number of row and column */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+
+    /* Defaut Value of flex-wrap is nowap */
+    flex-wrap: wrap;
+    /* flex-wrap: wrap-reverse ; */
+
+    /* Short Hand writing flex-wrap */
+    /* If you want to add flex-wrap and flex-direction in same line  */
+    /* Then we should Flex-Flow */
+    /* Flex - Flow : flex-direction flex-wrap */
+    /* flex-flow: row-reverse wrap ; */
+
+    /* Justify Content wil justify the content in horizontal position  */
+    justify-content: center;
+    /* justify-content: space-between; -> start and end have less space */
+    /* justify-content: space-between; */
+    /* justify-content: space-evenly;  -> It give equal space all place */
+    /* justify-content: space-evenly; */
+    /*  justify-content: space-around; -> It give less space in the corner and more space between the boxes */
+    /* justify-content: space-around; */
+    
+    /* Flex Property for flex items */
+    /* align-items: center;
+    align-items: flex-end;
+    align-items: flex-start;
+    align-items: flex-start;
+    align-items: stretch;
+     */
+
+}
+    #item-1{
+        /* Higher the order Later the box is shown */
+        order: 2;
+        
+
+    }
+    #item-2{
+        /* It contols the width of item */
+        flex-basis: 320px;
+
+    }
+    #item-3{
+        /* Higher the flex grow longer the box is shown */
+        flex-grow: 3;
+        /* Short hand */
+        align-self: flex-end;
+        align-self: flex-start;
+        align-self: center;
+    }
+    #item-4{
+        /* Higher the flex shrink shoter the box is shown */
+        flex-shrink: 6;
+    }
+
+}
+    </style>
 </head>
-<body> 
-  <strike> 1500 </strike> 1200
-  <br>
-  H<sub>2</sub>o
-  <br>
-  (a+b)<sup>2</sup> =a<sup>3</sup>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia enim sequi nostrum 
-  voluptatum ab quis maiores tenetur perspiciatis reiciendis tempora odit earum a quas consequatur, 
-  facilis cumque sed necessitatibus delectus, obcaecati esse repudiandae illum. Eius sed modi amet
-   mollitia animi voluptatum, nam fugit nisi perferendis ab. Quas unde commodi sed quae explicabo
-    soluta eum repellat quos magnam, aperiam nulla! Alias ab, assumenda, inventore quasi, consequatur animi vel odio iure esse magnam et hic! Similique quam, temporibus natus alias voluptatem, sequi at illum harum voluptatum delectus maiores quidem est nulla praesentium accusamus. 
-  Illum, a. Voluptatem perferendis quae sint placeat facilis similique.</p>
-
-  <ol>
-    <li>apple</li>
-    <li>banaa</li>
-    <li>mango</li>
-  </ol>
-
-  <ul>
-    <li>apple</li>
-    <li>bana</li>
-    <li>mango</li>
-  </ul>
-
-  <ol type="A" start="z">
-    <li>apple</li>
-    <li>banaa</li>
-    <li>mango</li>
-  </ol>
-
+<body>
+    <h2>This is a Flexbox </h2>
+    <div class="container">
+        <div class="item" id="item-1">First Box</div>
+        <div class="item" id="item-2">Second Box</div>
+        <div class="item" id="item-3">Third Box</div>
+        <div class="item" id="item-4">Forth Box</div>
+        <div class="item" id="item-5">Fifth Box</div>
+        <div class="item" id="item-6">Sixth Box</div>
+        <div class="item" id="item-7">Seventh Box</div>
+    </div>
 </body>
 </html>
